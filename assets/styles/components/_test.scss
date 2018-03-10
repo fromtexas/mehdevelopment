@@ -1,0 +1,38 @@
+body {
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+.dark-blue {
+  fill:#36495E;
+}
+.grey-blue {
+  fill:#415C7D;
+}
+.blue {
+  fill:#87BADE;
+}
+.joint-i-b {
+  transform-origin: 50% 50%;
+}
+.ja {
+  transform: scale(.75);
+  transform-origin: 50% 0;
+}
+.man {
+  opacity: 0
+}
+
+.dot{
+  fill:none;stroke:#333333;stroke-width:15.06499958;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1
+}
+
+.braket{
+  fill:none;
+  stroke:#333333;
+  stroke-width:15.06499958;
+  stroke-linecap:butt;
+  stroke-linejoin:miter;
+  stroke-miterlimit:4;
+  stroke-dasharray:none;
+  stroke-opacity:1;
+}

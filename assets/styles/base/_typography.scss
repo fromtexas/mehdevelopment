@@ -1,0 +1,20 @@
+@font-face{ 
+	font-family: 'proximaB';
+	src: url('../fonts/Proxima_Bold.otf');
+}
+
+@font-face{ 
+	font-family: 'proximaR';
+	src: url('../fonts/Proxima_Regular.otf');
+}
+
+body{
+    font-family: 'proximaR', sans-serif;
+    line-height: 1.7;
+    color: $grey;
+}
+
+.title{
+	font-size: 2.5rem;
+	text-transform: uppercase;
+}

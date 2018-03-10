@@ -1,0 +1,22 @@
+.header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgba($white,.7), rgba($white,.9)), url('../img/header.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @supports (clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%)){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+        height: 100vh;
+    }
+
+    &__title{
+        font-size: 4rem;
+        font-family: 'proximaB';
+    }
+}
