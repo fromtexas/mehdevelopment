@@ -1,0 +1,34 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &__item{
+        width: 20rem;
+
+        &:not(:last-child){
+            margin-right: 10rem;
+        }
+    }
+
+    &__item-title{
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        letter-spacing: .5rem;
+    }
+
+    &__item-pic{
+        display: block;
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+    }
+
+    &__item-description{
+        margin-top: 1rem;
+        font-size: 1.6rem;
+    }
+}

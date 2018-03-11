@@ -18,3 +18,25 @@ body{
 	font-size: 2.5rem;
 	text-transform: uppercase;
 }
+
+
+.section{
+	&__wrap{
+		margin-bottom: 10rem;
+	}
+
+	&__description{
+		font-size: 1.6rem;
+		max-width: 120rem;
+		margin-top: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__title{
+		font-family: 'proximaB';
+		text-transform: uppercase;
+		letter-spacing: .5rem;
+		font-size: 4rem;
+	}
+}
