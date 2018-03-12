@@ -19,6 +19,13 @@ body{
 	text-transform: uppercase;
 }
 
+a,
+a:visited,
+a:link{
+	text-decoration: none;
+	color: inherit;
+}
+
 
 .section{
 	&__wrap{
@@ -38,5 +45,10 @@ body{
 		text-transform: uppercase;
 		letter-spacing: .5rem;
 		font-size: 4rem;
+	}
+
+	&--30{
+		max-width: 35%;
+		padding: 2rem;
 	}
 }

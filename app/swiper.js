@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-export const mySwiper = new Swiper ('.swiper-container', {
+const mySwiper = new Swiper ('.swiper-container', {
     //virtualTranslate: true,
     direction: 'vertical',
     height: window.innerHeight,
@@ -9,4 +9,13 @@ export const mySwiper = new Swiper ('.swiper-container', {
     keyboard: {
         enabled: true,
     },
+});
+
+const portfolioSwiper = new Swiper('.swiper-portfolio', {
+    slidesPerView: 4,
+    freeMode: true,
+    spaceBetween: 100,
+    scrollbar: {
+        el: '.swiper-scrollbar'
+    }
 });

@@ -1,48 +1,55 @@
 .skills{
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     &__wrap{
         position: relative;
-        height: 60rem;
-        width: 60rem;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__icon-wrap{
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child){
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__icon-title{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
     }
 
     &__icon{
-        position: absolute;
         height: 6rem;
         width: 6rem;
+        display: block;
+        margin-left: 2rem;
 
         &--js{
-            left: 50%;
-            transform: translateX(-50%);
+            
         }
 
         &--react{
-            left: 0;
-            top: 30%;
-            transform: translateY(-35%);
+            
         }
 
         &--redux{
-            right: 0;
-            top: 30%;
-            transform: translateY(-35%);
+           
         }
 
         &--html{
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            
         }
 
         &--css{
-            left: 0;
-            top: 70%;
-            transform: translateY(-65%);
+           
         }
     }
 }
