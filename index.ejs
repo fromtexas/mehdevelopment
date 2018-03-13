@@ -52,7 +52,7 @@
                       d="m 459.23444,-196.56334 c 0,0 44.6012,-5.29167 51.40477,22.67857 6.80357,27.97025 -15.11906,105.83333 -12.09524,124.73216 3.02381,18.89882 26.45834,41.5773899 39.30953,41.5773899 12.85119,0 -34.77381,-5.2916599 -37.04167,31.7500001 -2.26786,37.04166 18.89881,112.6369 6.04762,139.09523 -12.85119,26.45833 -49.13691,18.89881 -49.13691,18.89881"
                     />
                     <rect
-                      style="opacity: 0;fill:#7ed56f;fill-opacity:1;stroke:#7ed56f;stroke-width:15.065;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+                      style="fill:#7ed56f;fill-opacity:1;stroke:#7ed56f;stroke-width:15.065;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
                       width="42.333332"
                       height="42.333332"
                       x="148.16667"
@@ -423,7 +423,31 @@
           </div>
 
           <div class="swiper-slide">
-            Contacts
+            <section class="contacts">
+              <div class="section section__wrap">
+                <h2 class="section__title center">
+                  Contacts
+                </h2>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="contacts__animation-wrap">
+
+                  </div>
+                    <form action="submit" class="form">
+                      <input placeholder="Email" type="email" class="form__input">
+                      <textarea placeholder="Message" cols="30" rows="10" class="form__text"></textarea>
+                      <button class="form__submit-btn">Send</button>
+                    </form>   
+                </div>
+              </div>
+
+              <a href="#" class="contacts__icon-link">
+                <svg class="contacts__icon">
+                  <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
+                </svg>
+              </a>
+            </section>
           </div>
       </div>
   </div>

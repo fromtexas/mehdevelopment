@@ -12,9 +12,9 @@ const mySwiper = new Swiper ('.swiper-container', {
 });
 
 const portfolioSwiper = new Swiper('.swiper-portfolio', {
-    slidesPerView: 4,
+    slidesPerView: 3,
     freeMode: true,
-    spaceBetween: 100,
+    spaceBetween: 250,
     scrollbar: {
         el: '.swiper-scrollbar'
     }

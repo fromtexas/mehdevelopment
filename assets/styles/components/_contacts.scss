@@ -1,0 +1,28 @@
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+
+    &__animation-wrap{
+        width: 70%;
+    }
+
+    &__form-wrap{
+        position: relative;
+        display: flex;
+    }
+
+    &__icon-link{
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;    
+    }
+
+    &__icon{
+        height: 5rem;
+        width: 5rem;
+        margin-left: 10rem;
+    }
+}

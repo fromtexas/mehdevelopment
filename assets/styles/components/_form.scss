@@ -1,0 +1,41 @@
+.form{
+
+    &__input{
+        display: block;
+        font-size: 1.6rem;
+        padding: 1rem;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $grey;
+        margin-bottom: 3rem;  
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__text{
+        display: block;
+        font-size: 1.6rem;
+        padding: 1rem;
+        width: 100%;
+        border: none;
+        margin-bottom: 5rem;
+        border-bottom: 1px solid $grey;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__submit-btn{
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-family: 'proximaB';
+        &:focus{
+            outline: none;
+        }
+    }
+}

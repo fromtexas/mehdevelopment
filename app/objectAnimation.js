@@ -2,7 +2,7 @@ import anime from 'animejs';
 
 const rects = document.querySelectorAll('rect');
 [...rects].forEach(item => {
-    item.style.opacity = 0;
+    item.style.transform = 'scale(0)';
 });
 
 const timeline = anime.timeline();
@@ -24,10 +24,9 @@ timeline
     },
 }).add({
     targets: 'rect',
-    opacity: [0, 1],
+    scale: [0, 1],
     delay: (el, i) => i * 250,
     duration: 1000,
-    easing: 'easeInOutSine'
 })
 // .add({
 //     targets: '.braket',
