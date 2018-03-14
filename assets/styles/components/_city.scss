@@ -1,0 +1,17 @@
+.city{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+
+    &--about{
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &--skills{
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+}

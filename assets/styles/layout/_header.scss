@@ -1,10 +1,11 @@
 .header{
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right, rgba($white,.7), rgba($white,.9)), url('../img/header.jpg');
+    background-image: linear-gradient(to right, rgba($pale-green,.7), rgba($white,.9)), url('../img/header.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,6 +18,17 @@
 
     &__title{
         font-size: 4rem;
+        font-family: 'proximaB';
+    }
+
+    &__logo{
+        font-size: 3rem;
+        position: absolute;
+        top: 6rem;
+        left: 6rem;
+        color: $pale-pink;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
         font-family: 'proximaB';
     }
 }

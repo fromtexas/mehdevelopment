@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-const mySwiper = new Swiper ('.swiper-container', {
+export const mySwiper = new Swiper ('.swiper-container', {
     //virtualTranslate: true,
     direction: 'vertical',
     height: window.innerHeight,

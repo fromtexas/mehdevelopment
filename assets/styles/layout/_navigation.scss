@@ -36,7 +36,7 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        background-image: radial-gradient($white, $black);
+        background-image: radial-gradient($pale-green, $white);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
@@ -95,7 +95,7 @@
 
         &:hover, &:active{
             background-position: 100%;
-            color: $pink;
+            color: $pale-pink;
             transform: translateX(1rem);
         }
 
