@@ -11,11 +11,10 @@ export const mySwiper = new Swiper ('.swiper-container', {
     },
 });
 
-const portfolioSwiper = new Swiper('.swiper-portfolio', {
-    slidesPerView: 3,
-    freeMode: true,
-    spaceBetween: 250,
-    scrollbar: {
-        el: '.swiper-scrollbar'
-    }
+const portfolioSwiper = new Swiper('.portfolio__slider-container', {
+    loop: true,
+    navigation: {
+        nextEl: '.portfolio__slider-button-next',
+        prevEl: '.portfolio__slider-button-prev',
+    },
 });

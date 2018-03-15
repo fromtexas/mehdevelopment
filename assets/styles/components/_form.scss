@@ -7,9 +7,44 @@
         width: 100%;
         border: none;
         border-bottom: 1px solid $grey;
-        margin-bottom: 3rem;  
+        margin-bottom: 3rem; 
+        transition: all .3s; 
         &:focus{
             outline: none;
+            border-bottom: 1px solid $pale-pink;
+
+            &:invalid{
+                border-bottom: 1px solid $pink;
+            }
+
+        }
+    }
+
+    &__input:placeholder-shown + &__input-label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-2rem);
+    }
+
+    &__text:placeholder-shown + &__input-label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-18rem);
+    }
+
+    &__input-container{
+        position: relative;
+    }
+
+    &__input-label{
+        position: absolute;
+        transition: all .3s;
+        font-size: 1.6rem;
+        top: 5rem;
+        left: 1rem;
+
+        &--message{
+            top: 19rem;
         }
     }
 
@@ -21,8 +56,10 @@
         border: none;
         margin-bottom: 5rem;
         border-bottom: 1px solid $grey;
+        transition: all .3s; 
         &:focus{
             outline: none;
+            border-bottom: 1px solid $pale-pink;
         }
     }
 

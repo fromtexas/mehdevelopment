@@ -1,97 +1,97 @@
 .portfolio{
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
     position: relative;
+    justify-content: space-between;
 
-    &__card{
-        perspective: 150rem;
+    &__slider{
+        overflow: hidden;
         position: relative;
-       
-
-        &:hover .portfolio__item--front{
-            transform: rotateY(-180deg);
-        }
-    
-        &:hover .portfolio__item--back{
-            transform: rotateY(0);
-        }
     }
 
     &__item{
         position: relative;
-        transition: all .8s;
-        backface-visibility: hidden;
-        
-        &--front{
-
-        }
-
-        &--back{
-            transform: rotateY(180deg);
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: radial-gradient($white, rgba($grey, .2));
-           // background-color: rgba($grey, .05);
-        }
-    }
-
-    &__item-link{
-        &:not(:last-child){
-            margin-bottom: 2rem;
-        }
-
-        display: block;
-    }
-
-    &__item-title{
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        letter-spacing: .5rem;
-        position: absolute;
-        top: 20%;
-        background-color: $white;
-        right: -2rem;
-        padding-left: .5rem;
-        box-shadow: 0 1rem 3rem rgba($grey, 0.1);
-    }
-
-    &__item-description{
-        text-transform: uppercase;
-        letter-spacing: .5rem;
-        background-color: $white;
-        padding: .5rem;
-        position: absolute;
-        bottom: 0;
-        font-size: 1.6rem;
     }
 
     &__item-pic{
+        display: block;
         width: 100%;
-        height: 30rem;
-        object-fit: cover;
     }
 
-    &__item-icons-row{
+    &__item-overlay{
+        position: absolute;
+        background-image: linear-gradient(to bottom, rgba($white, .3), rgba($white, .6));
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__item-title{
+        font-size: 3rem;
+        letter-spacing: .5rem;
+        background-color: $white;
+        position: absolute;
+        left: 2rem;
+        top: 20%;
+        text-transform: uppercase;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-shadow: 0 1rem 3rem rgba($black, .1);
+    }
+
+    &__item-links-row{
         display: flex;
+        position: absolute;
+        bottom: 2rem;
+        right: 0;
     }
 
     &__item-icon{
-        height: 8rem;
-        width: 8rem;
+        width: 6rem;
+        height: 6rem;
+        margin-right: 3rem;
+        fill: $pale-pink;
     }
+
+    &__item-icon-arrow{
+        width: 6rem;
+        height: 6rem;
+        fill: $pale-pink;
+        position: absolute;
+        z-index: 11;
+        transform: rotate(-45deg);
+
+        &--left{
+            left: 4rem; 
+        }
+
+        &--right{
+            top: 4rem;
+        }
+
+    }
+
+    &__slider-button{
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        background-color: $white;
+        border-radius: 10px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        z-index: 10;
+        box-shadow: 0 1rem 3rem rgba($black, .1);
+
+        &-prev{
+            left: -5.5rem;
+        }
+
+        &-next{
+            right: -5.5rem;
+        }
+    }
+
 }
 
-.swiper-portfolio{
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 5rem;
-}

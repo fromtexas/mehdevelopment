@@ -17,6 +17,11 @@ body{
 .title{
 	font-size: 2.5rem;
 	text-transform: uppercase;
+	color: $pale-grey;
+
+	&--header{
+		color: $grey;
+	}
 }
 
 a,
@@ -33,7 +38,7 @@ a:link{
 	}
 
 	&__description{
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		max-width: 120rem;
 		margin-top: 1.5rem;
 		margin-left: auto;

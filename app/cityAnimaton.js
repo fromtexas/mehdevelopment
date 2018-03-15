@@ -7,11 +7,12 @@ const timeline = anime.timeline();
 let notDone = true;
 
 
-const city = document.querySelector('.city');
-city.setAttribute('height', window.innerWidth);
-city.setAttribute('width', window.innerWidth);
+const city = document.querySelectorAll('.city');
 
-
+[...city].forEach(item => {
+    item.setAttribute('height', window.innerWidth);
+    item.setAttribute('width', window.innerWidth);
+});
 
 
 mySwiper.on('slideChange', () => {
@@ -43,3 +44,4 @@ mySwiper.on('slideChange', () => {
         });
     }
 });
+
