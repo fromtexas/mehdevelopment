@@ -3,3 +3,4 @@ import './objectAnimation';
 import './swiper';
 import './emails';
 import './cityAnimaton';
+import './navigation';
