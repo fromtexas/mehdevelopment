@@ -1,8 +1,6 @@
 .portfolio{
-    height: 100%;
-    display: flex;
+    @include section;
     align-items: center;
-    position: relative;
     justify-content: space-between;
 
     &__slider{
