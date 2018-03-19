@@ -4,3 +4,6 @@ import './swiper';
 import './emails';
 import './cityAnimaton';
 import './navigation';
+import './preloader';
+import './skillsAnimation';
+import './lettersAnimation';

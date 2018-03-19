@@ -1,0 +1,7 @@
+.rect{
+    transition: ease-in-out .4s;
+
+    &:hover{
+        fill: pink;
+    }
+}

@@ -1,0 +1,42 @@
+.preloader{
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+
+    &__squre{
+        position: relative;
+        width: 10rem;
+        height: 10rem;
+        overflow: hidden;
+        border: 5px solid $pale-pink;
+    }
+
+    &__color{
+        position: absolute;
+        background-color: $pale-pink;
+        height: 0;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }
+
+    &__md{
+        margin-top: 3rem;
+        color: $pale-pink;
+        font-family: 'proximaB';
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        span{
+            display: inline-block;
+        }
+    }
+}
