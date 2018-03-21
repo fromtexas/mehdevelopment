@@ -7,3 +7,4 @@ import './navigation';
 import './preloader';
 import './skillsAnimation';
 import './lettersAnimation';
+import './sectionTitleAnimation';

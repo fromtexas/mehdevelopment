@@ -1,6 +1,6 @@
 import anime from 'animejs';
 import {objAnimation} from './objectAnimation';
-import {letter} from './lettersAnimation';
+
 
 const preloader = (() => {
 
@@ -46,7 +46,6 @@ const preloader = (() => {
                 timeline.pause();
                 preloader.style.display = 'none';
                 objAnimation();
-                letter();
             });
 
         }, 3100);

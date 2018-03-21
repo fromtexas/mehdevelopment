@@ -1,4 +1,5 @@
 import anime from 'animejs';
+import {lettersRemove, lettersReveals} from './lettersAnimation';
 
 const rects = document.querySelectorAll('rect');
 [...rects].forEach(item => {
@@ -12,6 +13,8 @@ const braket = document.querySelectorAll('.braket');
 
 const timeline = anime.timeline();
 
+const removedDate = lettersRemove('.header__title');
+const removedDate1 = lettersRemove('.title--header');
 
 export const objAnimation = () => {
 
@@ -41,6 +44,12 @@ export const objAnimation = () => {
         scale: [0, 1],
         delay: (el, i) => i * 250,
         duration: 1000,
+    });
+
+    let timelineDone = timeline.finished.then(() => {
+        lettersReveals(removedDate).finished.then(() => {
+            lettersReveals(removedDate1);
+        });
     });
     
 };

@@ -1,29 +1,27 @@
 import anime from 'animejs';
 
 
-const lettersInit = (() => {
-    const title = document.querySelector('.header__logo');
-    const titleLetter = [...title.innerHTML];
-    title.innerHTML = '';
+export const lettersRemove = (nodeDom) => {
+    const dom = document.querySelector(nodeDom);
+    const domContent = [...dom.innerHTML];
 
-    return {
-        title,
-        titleLetter
-    };
-})();
+    dom.innerHTML = '';
+    const className = nodeDom.split('.').join('');
 
-export const letter = () => {
-    
-    lettersInit.titleLetter.forEach(item => {
-        lettersInit.title.innerHTML += `<span class="logo__letter">${item}</span`
+    domContent.forEach(item => {
+        dom.innerHTML += `<span class="${className}-letter revealed">${item}</span>`
     });
 
-    anime({
-        targets: '.logo__letter',
+    return nodeDom;
+
+};
+
+export const lettersReveals = (nodeDom) => {
+    return anime({
+        targets: nodeDom+'-letter',
         opacity: [0, 1],
-        duration: 1000,
+        duration: 500,
         delay: (el, i) => i*200,
         easing: 'easeInOutQuad',
     });
-
 };
