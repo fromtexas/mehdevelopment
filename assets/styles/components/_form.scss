@@ -65,6 +65,7 @@
     }
 
     &__submit-btn{
+        position: relative;
         display: block;
         background-color: transparent;
         border: none;
@@ -72,6 +73,7 @@
         text-transform: uppercase;
         cursor: pointer;
         font-family: 'proximaB';
+        z-index: 10;
         &:focus{
             outline: none;
         }

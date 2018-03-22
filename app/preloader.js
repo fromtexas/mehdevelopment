@@ -55,7 +55,7 @@ const preloader = (() => {
     .add({
         targets: '.preloader__squre',
         rotate: '1turn' ,
-        borderRadius: ['0', '1rem'],
+        borderRadius: ['0', '3rem'],
         easing: 'easeInOutQuad',
         duration: 3000
     })
