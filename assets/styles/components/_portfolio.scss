@@ -3,9 +3,19 @@
     align-items: center;
     justify-content: space-between;
 
+    @include respond(tab-port){
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     &__slider{
         overflow: hidden;
         position: relative;
+
+        @include respond(tab-port){
+            order: 2;
+        }
     }
 
     &__item{

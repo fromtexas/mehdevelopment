@@ -2,4 +2,9 @@
     transition: all .9s;
     position: relative;
     display: block;
+
+    @include respond(tab-land){
+        width: 50rem;
+        height: 50rem;
+    }
 }

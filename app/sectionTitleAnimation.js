@@ -9,7 +9,6 @@ const notDoneSet = new Set();
 //folders for js
 //slides counter
 //responsivness
-//email form
 
 mySwiper.on('slideChange', () => {
 
