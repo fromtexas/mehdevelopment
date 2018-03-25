@@ -5,6 +5,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(to bottom, rgba($white, .5), $white), url('../img/header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     &__title{
         font-size: 5rem;

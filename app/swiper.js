@@ -1,4 +1,7 @@
 import Swiper from 'swiper';
+import {titleAnime} from './sectionTitleAnimation';
+import {cityAnimation} from './cityAnimaton';
+import {skillsAnimation} from './skillsAnimation';
 
 export const mySwiper = new Swiper ('.swiper-container', {
     //virtualTranslate: true,
@@ -17,4 +20,10 @@ const portfolioSwiper = new Swiper('.portfolio__slider-container', {
         nextEl: '.portfolio__slider-button-next',
         prevEl: '.portfolio__slider-button-prev',
     },
+});
+
+mySwiper.on('slideChange', () => {
+    titleAnime(mySwiper.activeIndex);
+    cityAnimation(mySwiper.isEnd);
+    skillsAnimation(mySwiper.activeIndex);
 });

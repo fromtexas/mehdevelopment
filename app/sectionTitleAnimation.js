@@ -1,7 +1,4 @@
-import {mySwiper} from './swiper';
 import {lettersRemove, lettersReveals} from './lettersAnimation';
-
-
 
 const notDoneSet = new Set();
 
@@ -10,14 +7,10 @@ const notDoneSet = new Set();
 //slides counter
 //responsivness
 
-mySwiper.on('slideChange', () => {
-
-    if(mySwiper.activeIndex > 0 && !notDoneSet.has(mySwiper.activeIndex)){
-        let active = mySwiper.activeIndex;
-        let removed = lettersRemove(`.large-word-${active}`);
-
+export const titleAnime = (index) => {
+    if(index > 0 && !notDoneSet.has(index)){
+        let removed = lettersRemove(`.large-word-${index}`);
         lettersReveals(removed);
-        notDoneSet.add(mySwiper.activeIndex);
-        
+        notDoneSet.add(index);      
     }
-});
+}

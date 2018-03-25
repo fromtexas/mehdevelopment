@@ -1,11 +1,7 @@
 import anime from 'animejs';
-import {mySwiper} from './swiper';
-
-
 
 const timeline = anime.timeline();
 let notDone = true;
-
 
 const city = document.querySelectorAll('.city');
 
@@ -14,9 +10,8 @@ const city = document.querySelectorAll('.city');
     item.setAttribute('width', window.innerWidth);
 });
 
-
-mySwiper.on('slideChange', () => {
-    if(mySwiper.isEnd && notDone){
+export const cityAnimation = (isEnd) => {
+    if(isEnd && notDone){
         notDone = false;
 
         timeline
@@ -40,8 +35,8 @@ mySwiper.on('slideChange', () => {
                 easing: 'easeInOutSine',
                 duration: 2000,
                 delay: (el, i) => i * 250,
-            } 
+            },
+            offset: '-=3000' 
         });
     }
-});
-
+};

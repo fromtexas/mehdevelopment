@@ -9,6 +9,10 @@
         flex-direction: column;
     }
 
+    @include respond(phone){
+        flex-wrap: nowrap;
+    }
+
     &__slider{
         overflow: hidden;
         position: relative;
@@ -78,6 +82,15 @@
 
         &--right{
             top: 4rem;
+        }
+
+    }
+
+    &__slider{
+        max-width: 70rem;
+
+        @include respond(tab-port){
+            width: 100vw;
         }
 
     }
