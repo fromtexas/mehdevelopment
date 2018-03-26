@@ -9,7 +9,7 @@
     }
 
     @include respond(phone){
-        width: 45rem;
-        height: 45rem;
+        width: 30vh;
+        height: 30vh;
     }
 }

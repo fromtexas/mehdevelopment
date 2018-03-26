@@ -16,6 +16,10 @@
         letter-spacing: .5rem;
         color: $pale-pink;
         text-transform: uppercase;
+
+        @include respond(phone){
+            font-size: 3rem;
+        }
     }
 
     &__logo{
