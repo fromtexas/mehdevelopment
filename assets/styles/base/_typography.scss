@@ -35,6 +35,10 @@ a:link{
 .section{
 	&__wrap{
 		margin-bottom: 10rem;
+		@include respond(phone){
+			margin-bottom: 5rem;
+			padding: 1rem;
+        }
 	}
 
 	&__description{
