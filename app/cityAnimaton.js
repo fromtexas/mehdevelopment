@@ -3,12 +3,15 @@ import anime from 'animejs';
 const timeline = anime.timeline();
 let notDone = true;
 
-const city = document.querySelectorAll('.city');
+const city = document.querySelector('.city');
 
-[...city].forEach(item => {
-    item.setAttribute('height', window.innerWidth);
-    item.setAttribute('width', window.innerWidth);
-});
+city.setAttribute('height', window.innerWidth);
+city.setAttribute('width', window.innerWidth);
+
+// [...city].forEach(item => {
+//     item.setAttribute('height', window.innerWidth);
+//     item.setAttribute('width', window.innerWidth);
+// });
 
 export const cityAnimation = (isEnd) => {
     if(isEnd && notDone){

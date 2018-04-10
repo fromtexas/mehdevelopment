@@ -15,7 +15,6 @@ const emailForm = (() => {
         e.preventDefault();
         email = emailItput.value;
         text = emailText.value;
-        console.log(email.length, text.length);
         
         if(email.length && text.length){
             emailBtn.innerHTML = 'Sending...';
