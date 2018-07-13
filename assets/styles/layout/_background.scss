@@ -1,0 +1,11 @@
+.background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: url('#goo') blur(4px);;
+}
+
+.background-filter{
+    display: none;
+}

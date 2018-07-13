@@ -25,6 +25,10 @@
         }
     }
 
+    &__item-overlay-wrap{
+        position: relative;
+    }
+
     &__item-overlay{
         position: absolute;
         width: 100%;

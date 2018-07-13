@@ -8,10 +8,6 @@ const city = document.querySelector('.city');
 city.setAttribute('height', window.innerWidth);
 city.setAttribute('width', window.innerWidth);
 
-// [...city].forEach(item => {
-//     item.setAttribute('height', window.innerWidth);
-//     item.setAttribute('width', window.innerWidth);
-// });
 
 export const cityAnimation = (isEnd) => {
     if(isEnd && notDone){
@@ -40,6 +36,6 @@ export const cityAnimation = (isEnd) => {
                 delay: (el, i) => i * 250,
             },
             offset: '-=3000' 
-        });
+        })
     }
 };

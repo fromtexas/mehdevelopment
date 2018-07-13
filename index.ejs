@@ -6,6 +6,22 @@
     <title>MEHDEVELOPMENT</title>
 </head>
 <body>
+  
+<svg class="background-filter">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 50 -16
+            " result="matrix" />
+            <feBlend in="SourceGraphic" in2="matrix" />
+        </filter>
+    </defs>
+</svg>
+  <canvas class="background"></canvas>
   <div class="preloader">
     <div class="preloader__squre">
       <div class="preloader__color"></div>
@@ -141,23 +157,29 @@
 
               <div class="row row--around">
                 <div class="about__item">
-                  <div class="about__item-overlay"></div>
-                  <p class="about__item-title">Location</p>
-                  <img src="./assets/img/about-1-light.png" alt="Moscow" class="about__item-pic">
+                  <div class="about__item-overlay-wrap">
+                    <div class="about__item-overlay"></div>
+                    <p class="about__item-title">Location</p>
+                    <img src="./assets/img/about-1-light.png" alt="Moscow" class="about__item-pic">
+                  </div>
                   <p class="about__item-description">Russia, Moscow</p>
                 </div>
 
                 <div class="about__item">
-                  <div class="about__item-overlay"></div>
-                  <p class="about__item-title">Education</p>
-                  <img src="./assets/img/about-2.jpg" alt="MGUPI" class="about__item-pic">
+                  <div class="about__item-overlay-wrap">
+                    <div class="about__item-overlay"></div>
+                    <p class="about__item-title">Education</p>
+                    <img src="./assets/img/about-2.jpg" alt="MGUPI" class="about__item-pic">
+                  </div>
                   <p class="about__item-description">Moscow State University of Instrument Engineering and Computer Science</p>
                 </div>
 
                 <div class="about__item">
-                  <div class="about__item-overlay"></div>
-                  <p class="about__item-title">Experience</p>
-                  <img src="./assets/img/about-3.jpg" alt="Experience" class="about__item-pic">
+                  <div class="about__item-overlay-wrap">
+                    <div class="about__item-overlay"></div>
+                    <p class="about__item-title">Experience</p>
+                    <img src="./assets/img/about-3.jpg" alt="Experience" class="about__item-pic">
+                  </div>
                   <p class="about__item-description">More than 2 years</p>
                 </div>
               </div>
@@ -556,7 +578,6 @@
       </div>
   </div>
 
-    
          
 </body>
 </html>

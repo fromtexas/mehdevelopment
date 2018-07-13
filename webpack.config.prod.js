@@ -18,6 +18,8 @@ const GLOBALS = {
 
 
 module.exports = {
+    target: 'web',
+    mode: 'production',
     entry: {
         bundle: path.join(dirApp, 'index')
     },
@@ -37,7 +39,7 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin(GLOBALS),
-        new ExtractTextPlugin('[name].[contenthash].css'),
+        new ExtractTextPlugin('[name].[md5:contenthash:hex:20].css'),
         new HtmlWebpackPlugin({
           template: path.join(__dirname, 'index.ejs'),
           favicon: 'favicon.ico',
@@ -62,7 +64,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                use: ['babel-loader'],
+                use: ['babel-loader']
             },
             {
                 test: /\.ejs$/,
@@ -161,4 +163,3 @@ module.exports = {
         ]
     }
 };
-

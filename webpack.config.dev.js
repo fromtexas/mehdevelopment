@@ -3,9 +3,10 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
+
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('development'),
-  __DEV__: true
+  __DEV__: true,
 };
 
 const dirNode = 'node_modules';
@@ -14,6 +15,8 @@ const dirAssets = path.join(__dirname, 'assets');
 
 
 module.exports = {
+    target: 'web',
+    mode: 'development',
     entry: {
         vendor: ['lodash'],
         bundle: path.join(dirApp, 'index')
@@ -29,11 +32,14 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin(GLOBALS),
-        new webpack.ProvidePlugin({
-            '_': 'lodash'
-        }),
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'index.ejs'),
+        new webpack.NoEmitOnErrorsPlugin(),
+        new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
+          template: path.join(__dirname, 'index.ejs'),
+          minify: {
+            removeComments: true,
+            collapseWhitespace: true
+          },
+          inject: true
         })
     ],
     module: {
@@ -65,6 +71,7 @@ module.exports = {
                             sourceMap: true
                         }
                     },
+                    'resolve-url-loader',
                     {
                         loader: 'sass-loader',
                         options: {

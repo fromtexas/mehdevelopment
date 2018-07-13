@@ -2,6 +2,14 @@ import Swiper from 'swiper';
 import {titleAnime} from './sectionTitleAnimation';
 import {cityAnimation} from './cityAnimaton';
 import {skillsAnimation} from './skillsAnimation';
+import Bubbles from './background';
+
+let background;
+
+window.addEventListener('DOMContentLoaded', () => {
+    background = new Bubbles('.background');
+    background.init();
+});
 
 export const mySwiper = new Swiper ('.swiper-container', {
     //virtualTranslate: true,
@@ -23,6 +31,7 @@ const portfolioSwiper = new Swiper('.portfolio__slider-container', {
 });
 
 mySwiper.on('slideChange', () => {
+    background.onScrollThrottled(mySwiper.activeIndex);
     titleAnime(mySwiper.activeIndex);
     cityAnimation(mySwiper.isEnd);
     skillsAnimation(mySwiper.activeIndex);
