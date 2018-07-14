@@ -21,6 +21,12 @@
         }
     }
 
+    &__input::placeholder {
+        color: $white;
+		text-shadow: 1px 1px 3px rgba($black, .6);
+        opacity: 1; 
+    }
+
     &__input:placeholder-shown + &__input-label{
         opacity: 0;
         visibility: hidden;
@@ -31,6 +37,11 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-18rem);
+    }
+
+    &__text::placeholder{
+        color: $white;
+		text-shadow: 1px 1px 3px rgba($black, .6);
     }
 
     &__input-container{
@@ -76,6 +87,8 @@
         cursor: pointer;
         font-family: 'proximaB';
         z-index: 10;
+        color: $white;
+		text-shadow: 1px 1px 3px rgba($black, .6);
         &:focus{
             outline: none;
         }

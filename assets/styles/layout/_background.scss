@@ -2,8 +2,16 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: -1;
-    filter: url('#goo') blur(4px);;
+    z-index: -3;
+    filter: url('#goo') blur(4px);
+}
+
+.background-sharp{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    filter: url('#goo');
 }
 
 .background-filter{

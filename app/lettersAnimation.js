@@ -20,7 +20,7 @@ export const lettersReveals = (nodeDom) => {
     return anime({
         targets: nodeDom+'-letter',
         opacity: [0, 1],
-        duration: 500,
+        duration: 700,
         delay: (el, i) => i*200,
         easing: 'easeInOutQuad',
     });

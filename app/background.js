@@ -3,9 +3,9 @@ import Matter from 'matter-js';
 
 
 export default class Bubbles {
-	constructor (canvasSelector) {
+	constructor (options) {
 		this.options = {
-			canvasSelector: canvasSelector,				// to find <canvas> in DOM to draw on
+			canvasSelector: '',				// to find <canvas> in DOM to draw on
 			radiusRange: [75, 150],			// random range of body radii
 			xVarianceRange: [-1, 1],	// random range of x velocity scaling on bodies
 			yVarianceRange: [0.5, 1.5],		// random range of y velocity scaling on bodies
@@ -16,7 +16,8 @@ export default class Bubbles {
 			pixelsPerBody: 50000,			// viewport pixels required for each body added
 
 			// colors to cycle through to fill bodies
-			colors: ['#cfd8d4']
+			colors: ['#2cbcc9'],
+			...options
 		};
 
 		this.scrollDelay = 100;

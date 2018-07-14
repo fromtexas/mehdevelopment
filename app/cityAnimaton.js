@@ -30,7 +30,7 @@ export const cityAnimation = (isEnd) => {
             direction: 'alternate',
             loop: false,
             fill: {
-                value: (el, i) => i ? ['#fff', '#556459'] : ['#fff', '#cfd8d4'],
+                value: (el, i) => i ? ['#fff', '#b9dfe4'] : ['#fff', '#b9dfe4'],
                 easing: 'easeInOutSine',
                 duration: 2000,
                 delay: (el, i) => i * 250,

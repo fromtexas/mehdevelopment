@@ -5,10 +5,20 @@ import {skillsAnimation} from './skillsAnimation';
 import Bubbles from './background';
 
 let background;
+let backgroundSharp;
 
 window.addEventListener('DOMContentLoaded', () => {
-    background = new Bubbles('.background');
+    background = new Bubbles({
+        canvasSelector: '.background',
+        yVarianceRange: [-1.5, -0.5],
+        pixelsPerBody: 30000,
+        colors: ['#308c91']
+    });
+    backgroundSharp = new Bubbles({
+        canvasSelector: '.background-sharp'
+    });
     background.init();
+    backgroundSharp.init();
 });
 
 export const mySwiper = new Swiper ('.swiper-container', {
@@ -32,7 +42,8 @@ const portfolioSwiper = new Swiper('.portfolio__slider-container', {
 
 mySwiper.on('slideChange', () => {
     background.onScrollThrottled(mySwiper.activeIndex);
+    backgroundSharp.onScrollThrottled(mySwiper.activeIndex);
     titleAnime(mySwiper.activeIndex);
-    cityAnimation(mySwiper.isEnd);
+    //cityAnimation(mySwiper.isEnd);
     skillsAnimation(mySwiper.activeIndex);
 });
