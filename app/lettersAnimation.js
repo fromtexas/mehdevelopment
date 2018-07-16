@@ -17,10 +17,12 @@ export const lettersRemove = (nodeDom) => {
 };
 
 export const lettersReveals = (nodeDom) => {
+    let currentWordLength = document.querySelectorAll(nodeDom+'-letter').length;
+    console.log(currentWordLength);
     return anime({
         targets: nodeDom+'-letter',
         opacity: [0, 1],
-        duration: 700,
+        duration: 15000/currentWordLength,
         delay: (el, i) => i*200,
         easing: 'easeInOutQuad',
     });

@@ -16,12 +16,12 @@
         width: 10rem;
         height: 10rem;
         overflow: hidden;
-        border: 5px solid $pale-pink;
+        border: 5px solid $cryo;
     }
 
     &__color{
         position: absolute;
-        background-color: $pale-pink;
+        background-color: $cryo;
         height: 0;
         width: 100%;
         left: 0;
@@ -31,7 +31,7 @@
 
     &__md{
         margin-top: 3rem;
-        color: $pale-pink;
+        color: $cryo;
         font-family: 'proximaB';
         font-size: 2rem;
         text-transform: uppercase;

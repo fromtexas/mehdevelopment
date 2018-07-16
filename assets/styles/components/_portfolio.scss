@@ -64,14 +64,14 @@
         width: 6rem;
         height: 6rem;
         margin-right: 3rem;
-        fill: $pale-pink;
+        fill: $white;
         transition: all .3s;
     }
 
     &__item-icon-arrow{
         width: 6rem;
         height: 6rem;
-        fill: $pale-pink;
+        fill: $black;
         position: absolute;
         z-index: 11;
         transform: rotate(-45deg);
