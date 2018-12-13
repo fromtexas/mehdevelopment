@@ -1,73 +1,77 @@
-.about{
-    @include section;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.about {
+  @include section;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 
-    &__item{
-        width: 20rem;
-        position: relative;
-        transition: all .5s;
+  &__item {
+    width: 20rem;
+    position: relative;
+    transition: all 0.5s;
 
-        &:not(:last-child){
-            margin-right: 10rem;
-        }
-
-        &:hover{
-            transform: translate(1rem, 1rem);
-        }
-
-        @include respond(phone){
-            width: 90%;
-            margin-right: 0 !important;
-            margin-bottom: 1rem;
-        }
+    &:not(:last-child) {
+      margin-right: 10rem;
     }
 
-    &__item-overlay-wrap{
-        position: relative;
+    &:hover {
+      transform: translate(1rem, 1rem);
     }
 
-    &__item-overlay{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-image: linear-gradient(to bottom, rgba($white, .2), rgba($blue, .8));
+    @include respond(phone) {
+      width: 90%;
+      margin-right: 0 !important;
+      margin-bottom: 1rem;
     }
+  }
 
-    &__item-title{
-        text-transform: uppercase;
-        font-size: 2rem;
-        letter-spacing: .5rem;
-        position: absolute;
-        top: 10%;
-        background-color: $white;
-        left: -2rem;
-        padding-right: .5rem;
-        padding-left: .5rem;
-        box-shadow: 0 1rem 3rem rgba($grey, 0.1);
+  &__item-overlay-wrap {
+    position: relative;
+  }
+
+  &__item-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba($white, 0.2),
+      rgba($blue, 0.8)
+    );
+  }
+
+  &__item-title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    position: absolute;
+    top: 10%;
+    background-color: $white;
+    left: -2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    box-shadow: 0 1rem 3rem rgba($grey, 0.1);
+  }
+
+  &__item-pic {
+    display: block;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+
+    @include respond(phone) {
+      height: 10vh;
     }
+  }
 
-    &__item-pic{
-        display: block;
-        width: 100%;
-        height: 30rem;
-        object-fit: cover;
-
-        @include respond(phone){
-            height: 10vh;
-        }
-    }
-
-    &__item-description{
-        position: relative;
-        margin-top: 1rem;
-        font-size: 1.6rem;
-        z-index: 10;
-        color: $white;
-		text-shadow: 1px 1px 3px rgba($black, .6);
-    }
+  &__item-description {
+    position: relative;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    z-index: 10;
+    color: $white;
+    text-shadow: 1px 1px 3px rgba($black, 0.6);
+  }
 }

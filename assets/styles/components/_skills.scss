@@ -1,44 +1,44 @@
-.skills{
-    @include section;
+.skills {
+  @include section;
+  align-items: center;
+
+  &__wrap {
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include respond(tab-land) {
+      width: 45%;
+    }
+  }
+
+  &__icon-wrap {
+    display: flex;
     align-items: center;
 
-    &__wrap{
-        position: relative;
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
 
-        @include respond(tab-land){
-            width: 45%;
-        }
+      @include respond(phone) {
+        margin-bottom: 1rem;
+      }
     }
+  }
 
-    &__icon-wrap{
-        display: flex;
-        align-items: center;
+  &__icon-title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: $white;
+    text-shadow: 1px 1px 3px rgba($black, 0.6);
+  }
 
-        &:not(:last-child){
-            margin-bottom: 2.5rem;
-
-            @include respond(phone){
-                margin-bottom: 1rem;
-            }
-        }
-    }
-
-    &__icon-title{
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        letter-spacing: .5rem;
-        color: $white;
-		text-shadow: 1px 1px 3px rgba($black, .6);
-    }
-
-    &__icon{
-        height: 6rem;
-        width: 6rem;
-        display: block;
-        margin-left: 2rem;
-    }
+  &__icon {
+    height: 6rem;
+    width: 6rem;
+    display: block;
+    margin-left: 2rem;
+  }
 }

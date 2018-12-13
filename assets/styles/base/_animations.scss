@@ -1,13 +1,13 @@
 @keyframes rotate {
-    0%{
-        transform: translateX(-50%) rotate(-90deg);
-    }
+  0% {
+    transform: translateX(-50%) rotate(-90deg);
+  }
 
-    10%{
-        transform: translateX(-50%) rotate(-90deg) scale(1.5); 
-    }
+  10% {
+    transform: translateX(-50%) rotate(-90deg) scale(1.5);
+  }
 
-    100%{
-        transform: translateX(-50%) rotate(-90deg)  scale(1.0);
-    }
+  100% {
+    transform: translateX(-50%) rotate(-90deg) scale(1);
+  }
 }

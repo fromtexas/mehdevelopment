@@ -1,123 +1,123 @@
-.portfolio{
-    @include section;
-    align-items: center;
-    justify-content: space-between;
+.portfolio {
+  @include section;
+  align-items: center;
+  justify-content: space-between;
 
-    @include respond(tab-port){
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column;
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  @include respond(phone) {
+    flex-wrap: nowrap;
+  }
+
+  &__slider {
+    overflow: hidden;
+    position: relative;
+
+    @include respond(tab-port) {
+      order: 2;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item-pic {
+    display: block;
+    width: 100%;
+  }
+
+  &__item-overlay {
+    position: absolute;
+    background-image: linear-gradient(
+      to bottom,
+      rgba($white, 0.1),
+      rgba($blue, 0.6)
+    );
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__item-title {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    background-color: $white;
+    position: absolute;
+    left: 2rem;
+    top: 20%;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 1rem 3rem rgba($black, 0.1);
+  }
+
+  &__item-links-row {
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+  }
+
+  &__item-icon {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 3rem;
+    fill: $white;
+    transition: all 0.3s;
+  }
+
+  &__item-icon-arrow {
+    width: 6rem;
+    height: 6rem;
+    fill: $black;
+    position: absolute;
+    z-index: 11;
+    transform: rotate(-45deg);
+
+    &--left {
+      left: 4rem;
     }
 
-    @include respond(phone){
-        flex-wrap: nowrap;
+    &--right {
+      top: 4rem;
+    }
+  }
+
+  &__slider {
+    max-width: 70rem;
+
+    @include respond(tab-port) {
+      width: 100vw;
+    }
+  }
+
+  &__item-link {
+    z-index: 10;
+  }
+
+  &__slider-button {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: $white;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 10;
+    box-shadow: 0 1rem 3rem rgba($black, 0.1);
+
+    &-prev {
+      left: -5.5rem;
     }
 
-    &__slider{
-        overflow: hidden;
-        position: relative;
-
-        @include respond(tab-port){
-            order: 2;
-        }
+    &-next {
+      right: -5.5rem;
     }
-
-    &__item{
-        position: relative;
-    }
-
-    &__item-pic{
-        display: block;
-        width: 100%;
-    }
-
-    &__item-overlay{
-        position: absolute;
-        background-image: linear-gradient(to bottom, rgba($white, .1), rgba($blue, .6));
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-
-    &__item-title{
-        font-size: 3rem;
-        letter-spacing: .5rem;
-        background-color: $white;
-        position: absolute;
-        left: 2rem;
-        top: 20%;
-        text-transform: uppercase;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        box-shadow: 0 1rem 3rem rgba($black, .1);
-    }
-
-    &__item-links-row{
-        display: flex;
-        position: absolute;
-        bottom: 2rem;
-        right: 0;
-    }
-
-    &__item-icon{
-        width: 6rem;
-        height: 6rem;
-        margin-right: 3rem;
-        fill: $white;
-        transition: all .3s;
-    }
-
-    &__item-icon-arrow{
-        width: 6rem;
-        height: 6rem;
-        fill: $black;
-        position: absolute;
-        z-index: 11;
-        transform: rotate(-45deg);
-
-        &--left{
-            left: 4rem; 
-        }
-
-        &--right{
-            top: 4rem;
-        }
-
-    }
-
-    &__slider{
-        max-width: 70rem;
-
-        @include respond(tab-port){
-            width: 100vw;
-        }
-
-    }
-
-    &__item-link{
-        z-index: 10;
-    }
-
-    &__slider-button{
-        position: absolute;
-        width: 10rem;
-        height: 10rem;
-        background-color: $white;
-        border-radius: 10px;
-        top: 50%;
-        transform: translateY(-50%) rotate(45deg);
-        z-index: 10;
-        box-shadow: 0 1rem 3rem rgba($black, .1);
-
-        &-prev{
-            left: -5.5rem;
-        }
-
-        &-next{
-            right: -5.5rem;
-        }
-    }
-
+  }
 }
-

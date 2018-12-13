@@ -1,25 +1,23 @@
-@import './abstracts/variables';
-@import './abstracts/mixins';
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 
-@import './base/base';
-@import './base/typography';
-@import './base/utilities';
-@import './base/animations';
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+@import "./base/animations";
 
-@import './vendor/swiper';
+@import "./vendor/swiper";
 
-@import './components/braket';
-@import './components/about';
-@import './components/skills';
-@import './components/portfolio';
-@import './components/contacts';
-@import './components/form';
-@import './components/city';
-@import './components/preloader';
-@import './components/obj';
+@import "./components/braket";
+@import "./components/about";
+@import "./components/skills";
+@import "./components/portfolio";
+@import "./components/contacts";
+@import "./components/form";
+@import "./components/city";
+@import "./components/preloader";
+@import "./components/obj";
 
-
-
-@import './layout/header';
-@import './layout/navigation';
-@import './layout/background';
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/background";

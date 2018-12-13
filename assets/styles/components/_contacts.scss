@@ -1,33 +1,33 @@
-.contacts{
-    @include section;
-    flex-direction: column;
+.contacts {
+  @include section;
+  flex-direction: column;
 
-    &__animation-wrap{
-        width: 70%;
+  &__animation-wrap {
+    width: 70%;
 
-        @include respond(tab-port){
-            width: 60%;
-        }
-
-        @include respond(phone){
-            width: 25%;
-        }
+    @include respond(tab-port) {
+      width: 60%;
     }
 
-    &__form-wrap{
-        position: relative;
-        display: flex;
+    @include respond(phone) {
+      width: 25%;
     }
+  }
 
-    &__icon-link{
-        position: absolute;
-        bottom: 2rem;
-        right: 2rem;    
-    }
+  &__form-wrap {
+    position: relative;
+    display: flex;
+  }
 
-    &__icon{
-        height: 5rem;
-        width: 5rem;
-        margin-left: 10rem;
-    }
+  &__icon-link {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  &__icon {
+    height: 5rem;
+    width: 5rem;
+    margin-left: 10rem;
+  }
 }

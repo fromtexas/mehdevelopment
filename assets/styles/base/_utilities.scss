@@ -1,29 +1,29 @@
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
 
-.right{
-    text-align: right;
+.right {
+  text-align: right;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
+.row {
+  display: flex;
+  flex-wrap: wrap;
 
-    &--around{
-        justify-content: space-around;
-    }
+  &--around {
+    justify-content: space-around;
+  }
 }
 
-.container{
-    max-width: 120rem;
-    margin: 0 auto;
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
-.margin-top-10{
-   margin-top: 10rem; 
+.margin-top-10 {
+  margin-top: 10rem;
 }
 
-.revealed{
-    opacity: 0;
+.revealed {
+  opacity: 0;
 }

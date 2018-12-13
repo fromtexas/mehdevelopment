@@ -1,96 +1,94 @@
-.form{
+.form {
+  &__input {
+    background-color: transparent;
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $grey;
+    margin-bottom: 3rem;
+    transition: all 0.3s;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $pale-pink;
 
-    &__input{
-        background-color: transparent;
-        display: block;
-        font-size: 1.6rem;
-        padding: 1rem;
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid $grey;
-        margin-bottom: 3rem; 
-        transition: all .3s; 
-        &:focus{
-            outline: none;
-            border-bottom: 1px solid $pale-pink;
-
-            &:invalid{
-                border-bottom: 1px solid $pink;
-            }
-
-        }
+      &:invalid {
+        border-bottom: 1px solid $pink;
+      }
     }
+  }
 
-    &__input::placeholder {
-        color: $white;
-		text-shadow: 1px 1px 3px rgba($black, .6);
-        opacity: 1; 
+  &__input::placeholder {
+    color: $white;
+    text-shadow: 1px 1px 3px rgba($black, 0.6);
+    opacity: 1;
+  }
+
+  &__input:placeholder-shown + &__input-label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2rem);
+  }
+
+  &__text:placeholder-shown + &__input-label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-18rem);
+  }
+
+  &__text::placeholder {
+    color: $white;
+    text-shadow: 1px 1px 3px rgba($black, 0.6);
+  }
+
+  &__input-container {
+    position: relative;
+  }
+
+  &__input-label {
+    position: absolute;
+    transition: all 0.3s;
+    font-size: 1.6rem;
+    top: 5rem;
+    left: 1rem;
+
+    &--message {
+      top: 19rem;
     }
+  }
 
-    &__input:placeholder-shown + &__input-label{
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-2rem);
+  &__text {
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid $grey;
+    transition: all 0.3s;
+    font-family: "proximaR", sans-serif;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $pale-pink;
     }
+  }
 
-    &__text:placeholder-shown + &__input-label{
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-18rem);
+  &__submit-btn {
+    position: relative;
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "proximaB";
+    z-index: 10;
+    color: $white;
+    text-shadow: 1px 1px 3px rgba($black, 0.6);
+    &:focus {
+      outline: none;
     }
-
-    &__text::placeholder{
-        color: $white;
-		text-shadow: 1px 1px 3px rgba($black, .6);
-    }
-
-    &__input-container{
-        position: relative;
-    }
-
-    &__input-label{
-        position: absolute;
-        transition: all .3s;
-        font-size: 1.6rem;
-        top: 5rem;
-        left: 1rem;
-
-        &--message{
-            top: 19rem;
-        }
-    }
-
-    &__text{
-        display: block;
-        font-size: 1.6rem;
-        padding: 1rem;
-        width: 100%;
-        background-color: transparent;
-        border: none;
-        margin-bottom: 5rem;
-        border-bottom: 1px solid $grey;
-        transition: all .3s; 
-        font-family: 'proximaR', sans-serif;
-        &:focus{
-            outline: none;
-            border-bottom: 1px solid $pale-pink;
-        }
-    }
-
-    &__submit-btn{
-        position: relative;
-        display: block;
-        background-color: transparent;
-        border: none;
-        font-size: 2rem;
-        text-transform: uppercase;
-        cursor: pointer;
-        font-family: 'proximaB';
-        z-index: 10;
-        color: $white;
-		text-shadow: 1px 1px 3px rgba($black, .6);
-        &:focus{
-            outline: none;
-        }
-    }
+  }
 }

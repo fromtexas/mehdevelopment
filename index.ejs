@@ -1,584 +1,796 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MEHDEVELOPMENT</title>
-</head>
-<body>
-  
-<svg class="background-filter">
-    <defs>
-        <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="
-                1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-                0 0 0 50 -16
-            " result="matrix" />
-            <feBlend in="SourceGraphic" in2="matrix" />
-        </filter>
-    </defs>
-</svg>
-  <canvas class="background"></canvas>
-  <canvas class="background-sharp"></canvas>
-  <div class="preloader">
-    <div class="preloader__squre">
-      <div class="preloader__color"></div>
-    </div>
-    <div class="preloader__md center">
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader__squre"><div class="preloader__color"></div></div>
+      <div class="preloader__md center">
         <span class="preloader__md--1">Meh</span>
         <span class="preloader__md--2 preloader__md--1">Dev</span>
-    </div>
-  </div>
-  
-  <div class="navigation">
-    <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
-    <label for="navi-toggle" class="navigation__button">
-      <span class="navigation__icon">
-        &nbsp;
-      </span>
-    </label>
-    <div class="navigation__background">
-      &nbsp;
-    </div>
-    <nav class="navigation__nav">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a data-id="0" href="#" class="navigation__link"><span>00</span>Home</a></li>
-        <li class="navigation__item"><a data-id="1" href="#" class="navigation__link"><span>01</span>About</a></li>
-        <li class="navigation__item"><a data-id="2" href="#" class="navigation__link"><span>02</span>Skills</a></li>
-        <li class="navigation__item"><a data-id="3" href="#" class="navigation__link"><span>03</span>Portfolio</a></li>
-        <li class="navigation__item"><a data-id="4" href="#" class="navigation__link"><span>04</span>Contacts</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="swiper-container">
-      <div class="swiper-wrapper">
-          <div class="swiper-slide">
-              <header class="header">
-                <p class="header__logo">Mehdev</p>
-                <svg
-                  width="600"
-                  height="600"
-                  viewBox="0 0 600 600"
-                  class="obj"
-                 >
-                  <g transform="translate(0,303)">
-                    <path
-                      style="fill: none;"
-                      class="braket braket__1"
-                      d="m 139.85119,185.11906 c 0,0 -44.601189,5.29167 -51.404763,-22.67857 C 81.642857,134.47024 103.56548,56.607152 100.54167,37.708335 97.517861,18.809518 74.083327,-3.869057 61.232137,-3.869057 c -12.85119,0 34.773814,5.2916666 37.041674,-31.749999 2.267859,-37.041656 -18.898814,-112.636894 -6.047624,-139.095224 12.851193,-26.45833 49.136913,-18.89881 49.136913,-18.89881"
-                    />
-                    <path
-                      style="fill: none"
-                      class="braket braket__2"
-                      d="m 459.23444,-196.56334 c 0,0 44.6012,-5.29167 51.40477,22.67857 6.80357,27.97025 -15.11906,105.83333 -12.09524,124.73216 3.02381,18.89882 26.45834,41.5773899 39.30953,41.5773899 12.85119,0 -34.77381,-5.2916599 -37.04167,31.7500001 -2.26786,37.04166 18.89881,112.6369 6.04762,139.09523 -12.85119,26.45833 -49.13691,18.89881 -49.13691,18.89881"
-                    />
-                    <rect
-                      style="fill:#fff;stroke:#fff;stroke-width:15.065;stroke-linejoin:round;"
-                      width="42.333332"
-                      height="42.333332"
-                      x="148.16667"
-                      y="-52.249996" />
-                    <rect
-                      style="fill:#000;stroke:#000;stroke-width:15.06499958;stroke-linejoin:round;"
-                      width="21.166666"
-                      height="21.166666"
-                      x="402.16666"
-                      y="-73.416664" />
-                    <rect
-                      style="fill:#b9dfe4;stroke:#b9dfe4;stroke-width:15.06499958;stroke-linejoin:round;"
-                      width="31.75"
-                      height="31.75"
-                      x="169.33333"
-                      y="106.50001" />
-                    <rect
-                      style="fill:#000;stroke:#000;stroke-width:15.06500053;stroke-linejoin:round;"
-                      width="31.75"
-                      height="31.75"
-                      x="232.83333"
-                      y="32.416672" />
-                    <rect
-                      style="fill:#fff;stroke:#fff;stroke-width:15.06500053;stroke-linejoin:round;" 
-                      width="42.333332"
-                      height="42.333332"
-                      x="391.58334"
-                      y="74.750008" />
-                    <rect
-                      style="fill:#000;stroke:#000;stroke-width:15.06500149;stroke-linejoin:round;"
-                      width="31.75"
-                      height="31.75"
-                      x="370.41666"
-                      y="-158.08333" />
-                    <rect
-                      style="fill:#b9dfe4;stroke:#b9dfe4;stroke-width:15.06500053;stroke-linejoin:round;"
-                      width="21.166666"
-                      height="21.166666"
-                      x="285.75"
-                      y="-83.999992" />
-                    <rect
-                      style="fill:#fff;stroke:#fff;stroke-width:15.06500053;stroke-linejoin:round;"
-                      width="21.166666"
-                      height="21.166666"
-                      x="328.08334"
-                      y="0.66667122" />
-                    <rect
-                      style="fill:#b9dfe4;stroke:#b9dfe4;stroke-width:15.06500149;stroke-linejoin:round;"
-                      width="31.75"
-                      height="31.75"
-                      x="188.23215"
-                      y="-155.81548" />
-                   </g>
-                 </svg>
-              
-                <h1 class="header__title center">Hi! I'm Oleg Veskelen!</h1>
-                <h4 class="title title--header center">Front-end developer</h4>
-
-                <svg class="header__arrow">
-                  <use xlink:href="./assets/img/symbol-defs.svg#icon-keyboard_arrow_left"/>
-                </svg>
-              </header>
-          </div>
-
-          <div class="swiper-slide">
-            <section class="about">
-              <p class="large-word large-word--left large-word-1">About</p>
-              <div class="section section__wrap">
-                <h2 class="section__title center">
-                  About
-                </h2>
-                <h4 class="title center">Couple words about me</h4>
-                <p class="section__description center">
-                  I'm digital creative front-end development person situated in Moscow, Russia. My work is to provide clients with the most innovative and unique web applications approaches using the latest modern technologies.
-                </p>
-              </div>
-              
-
-              <div class="row row--around">
-                <div class="about__item">
-                  <div class="about__item-overlay-wrap">
-                    <div class="about__item-overlay"></div>
-                    <p class="about__item-title">Location</p>
-                    <img src="./assets/img/about-1-light.png" alt="Moscow" class="about__item-pic">
-                  </div>
-                  <p class="about__item-description">Russia, Moscow</p>
-                </div>
-
-                <div class="about__item">
-                  <div class="about__item-overlay-wrap">
-                    <div class="about__item-overlay"></div>
-                    <p class="about__item-title">Education</p>
-                    <img src="./assets/img/about-2.jpg" alt="MGUPI" class="about__item-pic">
-                  </div>
-                  <p class="about__item-description">Moscow State University of Instrument Engineering and Computer Science</p>
-                </div>
-
-                <div class="about__item">
-                  <div class="about__item-overlay-wrap">
-                    <div class="about__item-overlay"></div>
-                    <p class="about__item-title">Experience</p>
-                    <img src="./assets/img/about-3.jpg" alt="Experience" class="about__item-pic">
-                  </div>
-                  <p class="about__item-description">More than 2 years</p>
-                </div>
-              </div>
-              
-            </section>
-          </div>
-          
-          <div class="swiper-slide">
-            <section class="skills container">
-              <p class="large-word large-word--left large-word-2">Skills</p>
-              <div class="section section__wrap section--30">
-                <h2 class="section__title right">
-                  Skills
-                </h2>
-                <h4 class="title right">Technologies I use</h4>
-                <p class="section__description right">
-                  I have experience with different JavaScript frameworks and libraries, such as Angular and jQuery, but now I prefer React.
-                  Also, I used to work as ruby on rails web developer. 
-                </p>
-              </div>
-
-              <div class="skills__wrap">
-                <div class="skills__icon-wrap">
-                  <p class="skills__icon-title">JavaScript</p>
-                  <svg class="skills__icon skills__icon--js">
-                    <use xlink:href="./assets/img/symbol-defs.svg#icon-javascript"/>
-                  </svg>
-                </div>
-
-                <div class="skills__icon-wrap">
-                  <p class="skills__icon-title">React, React-native</p>
-                  <svg class="skills__icon skills__icon--react">
-                    <use xlink:href="./assets/img/symbol-defs.svg#icon-react"/>
-                  </svg>
-                </div>
-
-                <div class="skills__icon-wrap">
-                  <p class="skills__icon-title">CSS</p>
-                  <svg class="skills__icon skills__icon--css">
-                    <use xlink:href="./assets/img/symbol-defs.svg#icon-csswizardry"/>
-                  </svg>
-                </div>
-
-                <div class="skills__icon-wrap">
-                  <p class="skills__icon-title">HTML</p>
-                  <svg class="skills__icon skills__icon--html">
-                    <use xlink:href="./assets/img/symbol-defs.svg#icon-html5"/>
-                  </svg>
-                </div>
-
-                <div class="skills__icon-wrap">
-                  <p class="skills__icon-title">Redux</p>
-                  <svg class="skills__icon skills__icon--redux">
-                    <use xlink:href="./assets/img/symbol-defs.svg#icon-redux"/>
-                  </svg>
-                </div>
-
-                <div class="skills__icon-wrap">
-                  <p class="skills__icon-title">Webpack</p>
-                  <svg class="skills__icon skills__icon--webpack">
-                    <use xlink:href="./assets/img/symbol-defs.svg#icon-webpack"/>
-                  </svg>
-                </div>
-
-                <div class="skills__icon-wrap">
-                  <p class="skills__icon-title">SASS</p>
-                  <svg class="skills__icon skills__icon--sass">
-                    <use xlink:href="./assets/img/symbol-defs.svg#icon-sass"/>
-                  </svg>
-                </div>
-
-                <div class="skills__icon-wrap">
-                  <p class="skills__icon-title">Firebase</p>
-                  <svg class="skills__icon skills__icon--firebase">
-                    <use xlink:href="./assets/img/symbol-defs.svg#icon-firebase"/>
-                  </svg>                  
-                </div>
-
-              </div>
-
-            </section>
-          </div>
-
-          <div class="swiper-slide">
-            <section class="portfolio container">
-              <p class="large-word large-word--right large-word-3">Portfolio</p>
-
-              <div  class="portfolio__slider">
-                <div class="portfolio__slider-container">
-
-                  <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/mehnews.png" alt="mehnews" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Mehnews</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="https://expo.io/@fromtexas/MehNews" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/react-native-news-app" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/budgety.png" alt="budgety" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Budgety</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="https://expo.io/@fromtexas/budgety" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/react-native-budget-app" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/searchery.PNG" alt="searchery" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Searchery</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="https://fromtexas.github.io/SearcheryBundle/" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/Searchery" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/weathery.PNG" alt="weathery" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Weathery</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="http://parched-dime.surge.sh/" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/Weathery" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/wood.PNG" alt="wooder" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Wooder</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="http://female-error.surge.sh" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/wooder-page" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/mus.PNG" alt="Musicians" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Musicians</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="http://spiky-drain.surge.sh/" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/musicians" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/naturs.PNG" alt="Natours" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Natours</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="http://messy-grade.surge.sh/" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/natours-page" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/mogo.PNG" alt="Mogo" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Mogo</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="http://quickest-yarn.surge.sh/" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/mogo" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/free.PNG" alt="Perth" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Perth</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="http://ceaseless-door.surge.sh/" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/freelanding" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/messenger.png" alt="Messenger" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Messenger</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="http://test.crimsonraven.lclients.ru/" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/rails-messenger" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="portfolio__item">
-                          <img src="./assets/img/css-grid.PNG" alt="Nexter" class="portfolio__item-pic">
-                          <div class="portfolio__item-overlay"></div>
-                          <div class="portfolio__item-title">Nexter</div>
-                          <div class="portfolio__item-links-row">
-                            <a target="_blank" href="http://excellent-dress.surge.sh/" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"/>
-                              </svg>
-                            </a>
-                            <a target="_blank" href="https://github.com/fromtexas/css-grid" class="portfolio__item-link">
-                              <svg class="portfolio__item-icon">
-                                <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-               
-                  <div class="portfolio__slider-button portfolio__slider-button-prev">
-                    <svg class="portfolio__item-icon-arrow portfolio__item-icon-arrow--left">
-                      <use xlink:href="./assets/img/symbol-defs.svg#icon-keyboard_arrow_left"/>
-                    </svg>
-                  </div>
-                  
-                  <div class="portfolio__slider-button portfolio__slider-button-next">
-                    <svg class="portfolio__item-icon-arrow portfolio__item-icon-arrow--right">
-                      <use xlink:href="./assets/img/symbol-defs.svg#icon-keyboard_arrow_right"/>
-                    </svg>
-                  </div>
-                  
-              </div>
-              </div>
-
-              <div class="section section__wrap section--30 section--port">
-                <h2 class="section__title left">
-                  Portfolio
-                </h2>
-                <h4 class="title left">Examples of my work</h4>
-                <p class="section__description left">
-                  You are 100% allowed to use this app for both personal and commercial use, but not claim it as your own. A credit to the original author is of course highly appreciated!
-                </p>
-              </div>
-            </section>
-          </div>
-
-          <div class="swiper-slide">
-            <section class="contacts">
-              <p class="large-word large-word--left large-word-4">Contacts</p>
-              <div class="section section__wrap">
-                <h2 class="section__title center margin-top-10">
-                  Contacts
-                </h2>
-              </div>
-
-                <div class="row">
-                  <div class="contacts__animation-wrap">
-
-                  </div>
-                    <form action="submit" class="form">
-                      <div class="form__input-container">
-                        <input id="email" placeholder="Email" type="email" class="form__input">
-                        <label for="email" class="form__input-label">Email</label>
-                      </div>
-                      
-                      <div class="form__input-container">
-                        <textarea id="message" placeholder="Message" cols="30" rows="10" class="form__text"></textarea>
-                        <label for="message" class="form__input-label form__input-label--message">Message</label>
-                      </div>
-                      
-
-                      <button class="form__submit-btn">Send</button>
-                    </form>   
-                </div>
-
-
-              <a href="#" class="contacts__icon-link">
-                <svg class="contacts__icon">
-                  <use xlink:href="./assets/img/symbol-defs.svg#icon-github"/>
-                </svg>
-              </a>
-
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 1600 1600"
-                class="city"
-                >
-                <path
-                  class="city__item city__item--1"
-                  style="fill:none;stroke:#cfd8d4;stroke-width:1px;"
-                  d="m 832.13746,1370.0905 -27.9581,16.9431 -0.91724,193.0873 702.14788,-1.411 -2.2931,-68.1275 -38.0402,-0.3532 v -60.3625 h -10.5407 l -12.8337,-26.8275 -12.8338,27.5339 h -9.6234 v 40.9468 l -19.708,-20.4733 v -10.2377 l 3.2078,0.3532 -3.6664,-3.5284 h -15.583 l -3.2078,2.4707 2.7492,0.3532 v 9.8825 l -18.7908,21.1798 -5.957,0.3533 -3.2078,1.7641 h -2.7518 v -21.8843 h -10.5406 v -21.1799 h -13.2923 v 21.1799 h -9.6235 v 22.2376 h -4.125 v -2.8239 h -4.1251 l -3.2077,-1.7641 -54.5405,0.3532 -1.8344,2.1174 -19.2494,-12.0019 -0.9147,-36.712 -52.2498,-30.0046 v 103.0754 l -10.9993,-7.7671 h -87.5382 v -10.2357 h -5.0423 v 10.589 h -32.5418 v -14.4725 h -2.7492 v 7.0606 h -21.9986 v -12.3551 h -4.125 v 21.1799 h -12.8338 v -16.2386 l 2.7517,0.7064 v -2.8238 l -4.58365,-2.1174 v -15.8854 h -10.5432 v -21.1798 h -10.54067 v -21.5331 h -12.83123 v 20.8266 h -9.62597 v 21.8863 h -10.54067 v 42.7129 h -23.83306 v -6.0009 l -2.7948,0.5757 v 13.8968 H 900.4263 v -8.4716 l 2.52114,-1.9418 -12.60318,-4.4123 -11.31855,5.0329 0.44848,1.2939 v 9.9098 l -5.48065,1.1319 v -98.9109 h -7.48234 l -14.20711,-27.5339 -13.29238,27.5339 -7.33286,0.3533 z m -58.02688,1.128 0.45862,58.9496 -7.33286,-0.3533 -13.2924,-27.532 -14.20709,27.532 h -7.48236 v 98.9108 l -5.48064,-1.1298 v -9.9118 l 0.44849,-1.2939 -11.31855,-5.033 -12.6032,4.4124 2.52115,1.9418 v 8.4715 h -17.83046 v -13.8967 l -2.79479,-0.5758 v 6.001 h -23.83306 v -42.713 h -10.54067 v -21.8843 h -9.62343 v -20.8265 h -12.83376 v 21.5311 H 617.8249 v 21.1797 h -10.54321 v 15.8855 l -4.58367,2.1173 v 2.8239 l 2.75172,-0.7064 v 16.2385 h -12.83376 v -21.1798 h -4.12505 v 12.3551 h -21.99858 v -7.0606 h -2.74919 v 14.4725 h -32.54179 v -10.589 h -5.04229 v 10.2377 h -87.53822 l -10.9993,7.7651 v -103.0734 l -52.24979,30.0046 -0.91469,36.71 -19.24939,12.0018 -1.83449,-2.1173 -54.54036,-0.3532 -3.20781,1.7641 h -4.12505 v 2.8239 h -4.12504 v -22.2376 h -9.62343 v -21.1799 h -13.2924 v 21.1799 h -10.54067 v 21.8863 h -2.75172 l -3.20781,-1.7662 -5.95699,-0.3532 -18.79078,-21.1799 v -9.8824 l 2.74919,-0.3532 -3.2078,-2.4707 h -15.58296 l -3.66643,3.5303 3.2078,-0.3532 v 10.2358 l -19.70801,20.4733 v -40.9468 h -9.62342 l -12.83377,-27.534 -12.83378,26.8276 H 141.1713 v 60.3624 l -38.04017,0.3532 -2.29309,68.1276 702.14789,1.4129 -0.91724,-193.0892 z"
-                  />
-                <path
-                  class="city__item city__item--2"
-                  style="fill:none;stroke:#556459;stroke-width:1px;"
-                  d="m 1596.5876,1353.9618 v 5.2954 l -10.4956,17.2991 -9.5435,0.7066 0.4774,48.0152 -2.3846,0.7067 -14.3153,-16.9479 -15.2675,16.5946 -8.1111,0.3533 -0.4775,83.6715 h -70.1387 v -11.2973 h -5.7241 v 10.946 h -31.9673 l -0.4774,-11.6505 -4.8747,-0.072 v 6.4255 h -22.321 v -10.5908 h -3.8168 v 18.3591 h -12.883 v -14.4748 h 3.3395 v -3.1776 l -18.9552,-8.0983 -18.8892,8.069 -1.9018,2.4378 h 2.5296 v 13.1242 c 0,0 0.4771,0.707 0,1.4131 -0.4771,0.7061 -7.6327,1.7649 -10.0183,8.1197 -0.1113,0.2965 -0.1587,0.4469 -0.2479,0.6929 l -17.4068,-0.3396 -23.8562,-0.3533 -0.4774,4.2374 -18.6069,-0.3532 -31.9674,-0.3533 v 19.4188 h -42.4657 l -16.2224,-53.6639 -14.3126,42.718 -21.4716,0.3533 -23.3788,-0.3533 -8.1111,-30.3608 h -11.4507 l -8.5886,29.6562 -0.4774,12.0039 h -52.4841 -56.77837 v 33.8917 c -34.4796,-21.0388 -73.03432,-22.2618 -116.41875,0 v -46.2489 l -9.54088,-11.6505 h -4.77175 l -9.32195,11.9472 h -12.14964 v -7.7117 h -12.88295 v -57.5481 h -24.33359 v 134.8664 h 800.61858 l -0.4775,-246.0765 z M 1.6522478,1354.0906 1.1748083,1600.1671 H 801.79338 v -134.8645 h -24.33359 v 57.5462 h -12.88295 v 7.7117 h -12.14701 l -9.32458,-11.9472 h -4.76912 l -9.54352,11.6505 v 46.2489 c -43.38451,-22.2618 -81.93914,-21.0387 -116.41874,0 V 1542.621 H 555.5955 503.11145 l -0.47745,-12.0039 -8.58863,-29.6562 h -11.45064 l -8.1112,30.3608 -23.37871,0.3533 -21.47158,-0.3533 -14.31264,-42.718 -16.22239,53.6639 h -42.46574 v -19.4188 l -31.96734,0.3533 -18.60695,0.3532 -0.47744,-4.2354 -23.85615,0.3513 -17.40675,0.3397 c -0.0892,-0.2458 -0.13683,-0.395 -0.24796,-0.691 -2.38564,-6.3549 -9.5412,-7.4156 -10.01832,-8.1216 -0.47714,-0.7062 0,-1.4112 0,-1.4112 v -13.1242 h 2.52964 l -1.90184,-2.4398 -18.8892,-8.0689 -18.95514,8.0982 v 3.1776 h 3.33944 v 14.4748 h -12.88031 v -18.359 h -3.81688 v 10.5926 h -22.3236 v -6.4274 l -4.87462,0.072 -0.47745,11.6505 h -31.96734 v -10.9459 h -5.724 v 11.2992 H 67.971496 l -0.477439,-83.6735 -8.111197,-0.3533 -15.267512,-16.5927 -14.312634,16.946 -2.387197,-0.7066 0.477439,-48.0153 -9.540877,-0.7066 -10.4983932,-17.2991 v -5.2954 z"
-                  />
-              </svg>
-
-            </section>
-          </div>
       </div>
-  </div>
+    </div>
 
-         
-</body>
+    <div class="navigation">
+      <input type="checkbox" id="navi-toggle" class="navigation__checkbox" />
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon"> &nbsp; </span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a data-id="0" href="#" class="navigation__link"
+              ><span>00</span>Home</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a data-id="1" href="#" class="navigation__link"
+              ><span>01</span>About</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a data-id="2" href="#" class="navigation__link"
+              ><span>02</span>Skills</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a data-id="3" href="#" class="navigation__link"
+              ><span>03</span>Portfolio</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a data-id="4" href="#" class="navigation__link"
+              ><span>04</span>Contacts</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <header class="header">
+            <p class="header__logo">Mehdev</p>
+            <svg width="600" height="600" viewBox="0 0 600 600" class="obj">
+              <g transform="translate(0,303)">
+                <path
+                  style="fill: none;"
+                  class="braket braket__1"
+                  d="m 139.85119,185.11906 c 0,0 -44.601189,5.29167 -51.404763,-22.67857 C 81.642857,134.47024 103.56548,56.607152 100.54167,37.708335 97.517861,18.809518 74.083327,-3.869057 61.232137,-3.869057 c -12.85119,0 34.773814,5.2916666 37.041674,-31.749999 2.267859,-37.041656 -18.898814,-112.636894 -6.047624,-139.095224 12.851193,-26.45833 49.136913,-18.89881 49.136913,-18.89881"
+                />
+                <path
+                  style="fill: none"
+                  class="braket braket__2"
+                  d="m 459.23444,-196.56334 c 0,0 44.6012,-5.29167 51.40477,22.67857 6.80357,27.97025 -15.11906,105.83333 -12.09524,124.73216 3.02381,18.89882 26.45834,41.5773899 39.30953,41.5773899 12.85119,0 -34.77381,-5.2916599 -37.04167,31.7500001 -2.26786,37.04166 18.89881,112.6369 6.04762,139.09523 -12.85119,26.45833 -49.13691,18.89881 -49.13691,18.89881"
+                />
+                <rect
+                  style="fill:#2cbcc9;stroke:#2cbcc9;stroke-width:15.065;stroke-linejoin:round;"
+                  width="42.333332"
+                  height="42.333332"
+                  x="148.16667"
+                  y="-52.249996"
+                />
+                <rect
+                  style="fill:#000;stroke:#000;stroke-width:15.06499958;stroke-linejoin:round;"
+                  width="21.166666"
+                  height="21.166666"
+                  x="402.16666"
+                  y="-73.416664"
+                />
+                <rect
+                  style="fill:#b9dfe4;stroke:#b9dfe4;stroke-width:15.06499958;stroke-linejoin:round;"
+                  width="31.75"
+                  height="31.75"
+                  x="169.33333"
+                  y="106.50001"
+                />
+                <rect
+                  style="fill:#000;stroke:#000;stroke-width:15.06500053;stroke-linejoin:round;"
+                  width="31.75"
+                  height="31.75"
+                  x="232.83333"
+                  y="32.416672"
+                />
+                <rect
+                  style="fill:#2cbcc9;stroke:#2cbcc9;stroke-width:15.06500053;stroke-linejoin:round;"
+                  width="42.333332"
+                  height="42.333332"
+                  x="391.58334"
+                  y="74.750008"
+                />
+                <rect
+                  style="fill:#000;stroke:#000;stroke-width:15.06500149;stroke-linejoin:round;"
+                  width="31.75"
+                  height="31.75"
+                  x="370.41666"
+                  y="-158.08333"
+                />
+                <rect
+                  style="fill:#b9dfe4;stroke:#b9dfe4;stroke-width:15.06500053;stroke-linejoin:round;"
+                  width="21.166666"
+                  height="21.166666"
+                  x="285.75"
+                  y="-83.999992"
+                />
+                <rect
+                  style="fill:#2cbcc9;stroke:#2cbcc9;stroke-width:15.06500053;stroke-linejoin:round;"
+                  width="21.166666"
+                  height="21.166666"
+                  x="328.08334"
+                  y="0.66667122"
+                />
+                <rect
+                  style="fill:#b9dfe4;stroke:#b9dfe4;stroke-width:15.06500149;stroke-linejoin:round;"
+                  width="31.75"
+                  height="31.75"
+                  x="188.23215"
+                  y="-155.81548"
+                />
+              </g>
+            </svg>
+
+            <h1 class="header__title center">Hi! I'm Oleg Veskelen!</h1>
+            <h4 class="title title--header center">Front-end developer</h4>
+
+            <svg class="header__arrow">
+              <use
+                xlink:href="./assets/img/symbol-defs.svg#icon-keyboard_arrow_left"
+              />
+            </svg>
+          </header>
+        </div>
+
+        <div class="swiper-slide">
+          <section class="about">
+            <p class="large-word large-word--left large-word-1">About</p>
+            <div class="section section__wrap">
+              <h2 class="section__title center">About</h2>
+              <h4 class="title center">Couple words about me</h4>
+              <p class="section__description center">
+                I'm digital creative front-end development person situated in
+                Moscow, Russia. My work is to provide clients with the most
+                innovative and unique web applications approaches using the
+                latest modern technologies.
+              </p>
+            </div>
+
+            <div class="row row--around">
+              <div class="about__item">
+                <div class="about__item-overlay-wrap">
+                  <div class="about__item-overlay"></div>
+                  <p class="about__item-title">Location</p>
+                  <img
+                    src="./assets/img/about-1-light.png"
+                    alt="Moscow"
+                    class="about__item-pic"
+                  />
+                </div>
+                <p class="about__item-description">Russia, Moscow</p>
+              </div>
+
+              <div class="about__item">
+                <div class="about__item-overlay-wrap">
+                  <div class="about__item-overlay"></div>
+                  <p class="about__item-title">Education</p>
+                  <img
+                    src="./assets/img/about-2.jpg"
+                    alt="MGUPI"
+                    class="about__item-pic"
+                  />
+                </div>
+                <p class="about__item-description">
+                  Moscow State University of Instrument Engineering and Computer
+                  Science
+                </p>
+              </div>
+
+              <div class="about__item">
+                <div class="about__item-overlay-wrap">
+                  <div class="about__item-overlay"></div>
+                  <p class="about__item-title">Experience</p>
+                  <img
+                    src="./assets/img/about-3.jpg"
+                    alt="Experience"
+                    class="about__item-pic"
+                  />
+                </div>
+                <p class="about__item-description">More than 2 years</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="swiper-slide">
+          <section class="skills container">
+            <p class="large-word large-word--left large-word-2">Skills</p>
+            <div class="section section__wrap section--30">
+              <h2 class="section__title right">Skills</h2>
+              <h4 class="title right">Technologies I use</h4>
+              <p class="section__description right">
+                I have experience with different JavaScript frameworks and
+                libraries, such as Angular and jQuery, but now I prefer React.
+                Also, I used to work as ruby on rails web developer.
+              </p>
+            </div>
+
+            <div class="skills__wrap">
+              <div class="skills__icon-wrap">
+                <p class="skills__icon-title">JavaScript</p>
+                <svg class="skills__icon skills__icon--js">
+                  <use
+                    xlink:href="./assets/img/symbol-defs.svg#icon-javascript"
+                  />
+                </svg>
+              </div>
+
+              <div class="skills__icon-wrap">
+                <p class="skills__icon-title">React, React-native</p>
+                <svg class="skills__icon skills__icon--react">
+                  <use xlink:href="./assets/img/symbol-defs.svg#icon-react" />
+                </svg>
+              </div>
+
+              <div class="skills__icon-wrap">
+                <p class="skills__icon-title">CSS</p>
+                <svg class="skills__icon skills__icon--css">
+                  <use
+                    xlink:href="./assets/img/symbol-defs.svg#icon-csswizardry"
+                  />
+                </svg>
+              </div>
+
+              <div class="skills__icon-wrap">
+                <p class="skills__icon-title">HTML</p>
+                <svg class="skills__icon skills__icon--html">
+                  <use xlink:href="./assets/img/symbol-defs.svg#icon-html5" />
+                </svg>
+              </div>
+
+              <div class="skills__icon-wrap">
+                <p class="skills__icon-title">Redux</p>
+                <svg class="skills__icon skills__icon--redux">
+                  <use xlink:href="./assets/img/symbol-defs.svg#icon-redux" />
+                </svg>
+              </div>
+
+              <div class="skills__icon-wrap">
+                <p class="skills__icon-title">Webpack</p>
+                <svg class="skills__icon skills__icon--webpack">
+                  <use xlink:href="./assets/img/symbol-defs.svg#icon-webpack" />
+                </svg>
+              </div>
+
+              <div class="skills__icon-wrap">
+                <p class="skills__icon-title">SASS</p>
+                <svg class="skills__icon skills__icon--sass">
+                  <use xlink:href="./assets/img/symbol-defs.svg#icon-sass" />
+                </svg>
+              </div>
+
+              <div class="skills__icon-wrap">
+                <p class="skills__icon-title">Firebase</p>
+                <svg class="skills__icon skills__icon--firebase">
+                  <use
+                    xlink:href="./assets/img/symbol-defs.svg#icon-firebase"
+                  />
+                </svg>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="swiper-slide">
+          <section class="portfolio container">
+            <p class="large-word large-word--right large-word-3">Portfolio</p>
+
+            <div style="width: 700px" class="portfolio__slider">
+              <div class="portfolio__slider-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/mehnews.png"
+                        alt="mehnews"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Mehnews</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="https://expo.io/@fromtexas/MehNews"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/react-native-news-app"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/budgety.png"
+                        alt="budgety"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Budgety</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="https://expo.io/@fromtexas/budgety"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/react-native-budget-app"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/searchery.PNG"
+                        alt="searchery"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Searchery</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="https://fromtexas.github.io/SearcheryBundle/"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/Searchery"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/weathery.PNG"
+                        alt="weathery"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Weathery</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="http://parched-dime.surge.sh/"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/Weathery"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/wood.PNG"
+                        alt="wooder"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Wooder</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="http://female-error.surge.sh"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/wooder-page"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/mus.PNG"
+                        alt="Musicians"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Musicians</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="http://spiky-drain.surge.sh/"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/musicians"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/naturs.PNG"
+                        alt="Natours"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Natours</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="http://messy-grade.surge.sh/"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/natours-page"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/mogo.PNG"
+                        alt="Mogo"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Mogo</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="http://quickest-yarn.surge.sh/"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/mogo"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/free.PNG"
+                        alt="Perth"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Perth</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="http://ceaseless-door.surge.sh/"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/freelanding"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/messenger.png"
+                        alt="Messenger"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Messenger</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="http://test.crimsonraven.lclients.ru/"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/rails-messenger"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="portfolio__item">
+                      <img
+                        src="./assets/img/css-grid.PNG"
+                        alt="Nexter"
+                        class="portfolio__item-pic"
+                      />
+                      <div class="portfolio__item-overlay"></div>
+                      <div class="portfolio__item-title">Nexter</div>
+                      <div class="portfolio__item-links-row">
+                        <a
+                          target="_blank"
+                          href="http://excellent-dress.surge.sh/"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-open_in_new"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          target="_blank"
+                          href="https://github.com/fromtexas/css-grid"
+                          class="portfolio__item-link"
+                        >
+                          <svg class="portfolio__item-icon">
+                            <use
+                              xlink:href="./assets/img/symbol-defs.svg#icon-github"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="portfolio__slider-button portfolio__slider-button-prev"
+                >
+                  <svg
+                    class="portfolio__item-icon-arrow portfolio__item-icon-arrow--left"
+                  >
+                    <use
+                      xlink:href="./assets/img/symbol-defs.svg#icon-keyboard_arrow_left"
+                    />
+                  </svg>
+                </div>
+
+                <div
+                  class="portfolio__slider-button portfolio__slider-button-next"
+                >
+                  <svg
+                    class="portfolio__item-icon-arrow portfolio__item-icon-arrow--right"
+                  >
+                    <use
+                      xlink:href="./assets/img/symbol-defs.svg#icon-keyboard_arrow_right"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="section section__wrap section--30 section--port">
+              <h2 class="section__title left">Portfolio</h2>
+              <h4 class="title left">Examples of my work</h4>
+              <p class="section__description left">
+                You are 100% allowed to use this app for both personal and
+                commercial use, but not claim it as your own. A credit to the
+                original author is of course highly appreciated!
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div class="swiper-slide">
+          <section class="contacts">
+            <p class="large-word large-word--left large-word-4">Contacts</p>
+            <div class="section section__wrap">
+              <h2 class="section__title center margin-top-10">Contacts</h2>
+            </div>
+
+            <div class="row">
+              <div class="contacts__animation-wrap"></div>
+              <form action="submit" class="form">
+                <div class="form__input-container">
+                  <input
+                    id="email"
+                    placeholder="Email"
+                    type="email"
+                    class="form__input"
+                  />
+                  <label for="email" class="form__input-label">Email</label>
+                </div>
+
+                <div class="form__input-container">
+                  <textarea
+                    id="message"
+                    placeholder="Message"
+                    cols="30"
+                    rows="10"
+                    class="form__text"
+                  ></textarea>
+                  <label
+                    for="message"
+                    class="form__input-label form__input-label--message"
+                    >Message</label
+                  >
+                </div>
+
+                <button class="form__submit-btn">Send</button>
+              </form>
+            </div>
+
+            <a href="#" class="contacts__icon-link">
+              <svg class="contacts__icon">
+                <use xlink:href="./assets/img/symbol-defs.svg#icon-github" />
+              </svg>
+            </a>
+
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 1600 1600"
+              class="city"
+            >
+              <path
+                class="city__item city__item--1"
+                style="fill:none;stroke:#cfd8d4;stroke-width:1px;"
+                d="m 832.13746,1370.0905 -27.9581,16.9431 -0.91724,193.0873 702.14788,-1.411 -2.2931,-68.1275 -38.0402,-0.3532 v -60.3625 h -10.5407 l -12.8337,-26.8275 -12.8338,27.5339 h -9.6234 v 40.9468 l -19.708,-20.4733 v -10.2377 l 3.2078,0.3532 -3.6664,-3.5284 h -15.583 l -3.2078,2.4707 2.7492,0.3532 v 9.8825 l -18.7908,21.1798 -5.957,0.3533 -3.2078,1.7641 h -2.7518 v -21.8843 h -10.5406 v -21.1799 h -13.2923 v 21.1799 h -9.6235 v 22.2376 h -4.125 v -2.8239 h -4.1251 l -3.2077,-1.7641 -54.5405,0.3532 -1.8344,2.1174 -19.2494,-12.0019 -0.9147,-36.712 -52.2498,-30.0046 v 103.0754 l -10.9993,-7.7671 h -87.5382 v -10.2357 h -5.0423 v 10.589 h -32.5418 v -14.4725 h -2.7492 v 7.0606 h -21.9986 v -12.3551 h -4.125 v 21.1799 h -12.8338 v -16.2386 l 2.7517,0.7064 v -2.8238 l -4.58365,-2.1174 v -15.8854 h -10.5432 v -21.1798 h -10.54067 v -21.5331 h -12.83123 v 20.8266 h -9.62597 v 21.8863 h -10.54067 v 42.7129 h -23.83306 v -6.0009 l -2.7948,0.5757 v 13.8968 H 900.4263 v -8.4716 l 2.52114,-1.9418 -12.60318,-4.4123 -11.31855,5.0329 0.44848,1.2939 v 9.9098 l -5.48065,1.1319 v -98.9109 h -7.48234 l -14.20711,-27.5339 -13.29238,27.5339 -7.33286,0.3533 z m -58.02688,1.128 0.45862,58.9496 -7.33286,-0.3533 -13.2924,-27.532 -14.20709,27.532 h -7.48236 v 98.9108 l -5.48064,-1.1298 v -9.9118 l 0.44849,-1.2939 -11.31855,-5.033 -12.6032,4.4124 2.52115,1.9418 v 8.4715 h -17.83046 v -13.8967 l -2.79479,-0.5758 v 6.001 h -23.83306 v -42.713 h -10.54067 v -21.8843 h -9.62343 v -20.8265 h -12.83376 v 21.5311 H 617.8249 v 21.1797 h -10.54321 v 15.8855 l -4.58367,2.1173 v 2.8239 l 2.75172,-0.7064 v 16.2385 h -12.83376 v -21.1798 h -4.12505 v 12.3551 h -21.99858 v -7.0606 h -2.74919 v 14.4725 h -32.54179 v -10.589 h -5.04229 v 10.2377 h -87.53822 l -10.9993,7.7651 v -103.0734 l -52.24979,30.0046 -0.91469,36.71 -19.24939,12.0018 -1.83449,-2.1173 -54.54036,-0.3532 -3.20781,1.7641 h -4.12505 v 2.8239 h -4.12504 v -22.2376 h -9.62343 v -21.1799 h -13.2924 v 21.1799 h -10.54067 v 21.8863 h -2.75172 l -3.20781,-1.7662 -5.95699,-0.3532 -18.79078,-21.1799 v -9.8824 l 2.74919,-0.3532 -3.2078,-2.4707 h -15.58296 l -3.66643,3.5303 3.2078,-0.3532 v 10.2358 l -19.70801,20.4733 v -40.9468 h -9.62342 l -12.83377,-27.534 -12.83378,26.8276 H 141.1713 v 60.3624 l -38.04017,0.3532 -2.29309,68.1276 702.14789,1.4129 -0.91724,-193.0892 z"
+              />
+              <path
+                class="city__item city__item--2"
+                style="fill:none;stroke:#556459;stroke-width:1px;"
+                d="m 1596.5876,1353.9618 v 5.2954 l -10.4956,17.2991 -9.5435,0.7066 0.4774,48.0152 -2.3846,0.7067 -14.3153,-16.9479 -15.2675,16.5946 -8.1111,0.3533 -0.4775,83.6715 h -70.1387 v -11.2973 h -5.7241 v 10.946 h -31.9673 l -0.4774,-11.6505 -4.8747,-0.072 v 6.4255 h -22.321 v -10.5908 h -3.8168 v 18.3591 h -12.883 v -14.4748 h 3.3395 v -3.1776 l -18.9552,-8.0983 -18.8892,8.069 -1.9018,2.4378 h 2.5296 v 13.1242 c 0,0 0.4771,0.707 0,1.4131 -0.4771,0.7061 -7.6327,1.7649 -10.0183,8.1197 -0.1113,0.2965 -0.1587,0.4469 -0.2479,0.6929 l -17.4068,-0.3396 -23.8562,-0.3533 -0.4774,4.2374 -18.6069,-0.3532 -31.9674,-0.3533 v 19.4188 h -42.4657 l -16.2224,-53.6639 -14.3126,42.718 -21.4716,0.3533 -23.3788,-0.3533 -8.1111,-30.3608 h -11.4507 l -8.5886,29.6562 -0.4774,12.0039 h -52.4841 -56.77837 v 33.8917 c -34.4796,-21.0388 -73.03432,-22.2618 -116.41875,0 v -46.2489 l -9.54088,-11.6505 h -4.77175 l -9.32195,11.9472 h -12.14964 v -7.7117 h -12.88295 v -57.5481 h -24.33359 v 134.8664 h 800.61858 l -0.4775,-246.0765 z M 1.6522478,1354.0906 1.1748083,1600.1671 H 801.79338 v -134.8645 h -24.33359 v 57.5462 h -12.88295 v 7.7117 h -12.14701 l -9.32458,-11.9472 h -4.76912 l -9.54352,11.6505 v 46.2489 c -43.38451,-22.2618 -81.93914,-21.0387 -116.41874,0 V 1542.621 H 555.5955 503.11145 l -0.47745,-12.0039 -8.58863,-29.6562 h -11.45064 l -8.1112,30.3608 -23.37871,0.3533 -21.47158,-0.3533 -14.31264,-42.718 -16.22239,53.6639 h -42.46574 v -19.4188 l -31.96734,0.3533 -18.60695,0.3532 -0.47744,-4.2354 -23.85615,0.3513 -17.40675,0.3397 c -0.0892,-0.2458 -0.13683,-0.395 -0.24796,-0.691 -2.38564,-6.3549 -9.5412,-7.4156 -10.01832,-8.1216 -0.47714,-0.7062 0,-1.4112 0,-1.4112 v -13.1242 h 2.52964 l -1.90184,-2.4398 -18.8892,-8.0689 -18.95514,8.0982 v 3.1776 h 3.33944 v 14.4748 h -12.88031 v -18.359 h -3.81688 v 10.5926 h -22.3236 v -6.4274 l -4.87462,0.072 -0.47745,11.6505 h -31.96734 v -10.9459 h -5.724 v 11.2992 H 67.971496 l -0.477439,-83.6735 -8.111197,-0.3533 -15.267512,-16.5927 -14.312634,16.946 -2.387197,-0.7066 0.477439,-48.0153 -9.540877,-0.7066 -10.4983932,-17.2991 v -5.2954 z"
+              />
+            </svg>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,19 +1,19 @@
-.background{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -3;
-    filter: url('#goo') blur(4px);
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -3;
+  filter: url("#goo") blur(4px);
 }
 
-.background-sharp{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -2;
-    filter: url('#goo');
+.background-sharp {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  filter: url("#goo");
 }
 
-.background-filter{
-    display: none;
+.background-filter {
+  display: none;
 }
